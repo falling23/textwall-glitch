@@ -13,7 +13,7 @@ console.log("Starting server...");
 var port = 8080;
 
 
-var db = sql("./data.sqlite3");
+var db = sql("./.data/data.sqlite3");
 
 
 var pw_encryption = "sha512WithRSAEncryption";
