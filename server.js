@@ -42,6 +42,9 @@ async function runserver() {
 	var app = express();
 	server = http.createServer(app);
 	app.use(express.static(__dirname + "/client"));
+	app.get("/*", (req, res) => {
+		res.sendFile(__dirname + "/client/index.html");
+	});
 	server.listen(port, function() {
 		var addr = server.address();
 		console.log("TextWall server is hosted on " + addr.address + ":" + addr.port);
